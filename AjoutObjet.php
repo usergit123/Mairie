@@ -13,7 +13,7 @@
 	 <td> <input type="text" name="marque"> </td> </tr>
 	 <tr> <td> categorie </td>
 	 <td> <input type="text" name="idcategorie"> </td> </tr>
-<tr> <td> <input type="reset" name="Annuler" values="Annuler">
+<tr> <td> <input type="reset" name="Annuler" value="Annuler">
 	 </td>
 	 <td> <input type="submit" name="valider" value="valider">
 	 </td> </tr>
