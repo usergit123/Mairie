@@ -1,5 +1,5 @@
 <center>
-<h2> Ajout d'objet </h2>
+<h2> Ajout d'objets </h2>
 <br>
 <form method="post" action="">
 <table border =0>
