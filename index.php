@@ -55,57 +55,41 @@
 				}
 				switch ($page)
 				{
-					case 1:
-					//appel de la fonction select*from objets
-					$lesLignes = selectALLObjets ();
+					case 1 :
+						
+					$lesLignes = afficher_cantine();
 					//var_dump($lesLignes);
 					echo "
 					<table border=1>
-					<tr><td>Id Objet </td> <td>Désignation</td>
-					<td> Etat</td> <td> Prix d'achat </td>
-					<td>Date achat </td> <td>Marque</td>
-					<td> Tranche Age </td> <td> Image </td> </tr>
+					<tr><td>Ville </td> <td>Code postal</td>
+					<td> Prix</td> </tr>
 					";
 					//parcourir les lignes et les afficher dans la table
 					foreach ($lesLignes as $uneLigne)
 					{
-						echo "<tr> <td>".$uneLigne['idobjet']."</td>
-						<td>".$uneLigne['designation']."</td>
-						<td>".$uneLigne['etat']."</td>
-						<td>".$uneLigne['prixachat']."</td>
-						<td>".$uneLigne['dateachat']."</td>
-						<td>".$uneLigne['marque']."</td>
-						<td>".$uneLigne['trancheage']."</td>
-						<td>".$uneLigne['image']."</td></tr>";
+						echo "<tr> <td>".$uneLigne['Ville']."</td>
+						<td>".$uneLigne['Codepostal']."</td></tr>"
+						.$uneLigne['Ville']."</td><tr>";
 					}
-					echo "</table>";
 					break;
+						
 					case 2:
-					$mesObjets = selectALLObjetsEnfant($_SESSION['idenfant']);
-					//afficher les resultats
+					
+					$lesLignes = afficher_evenement();
+					//var_dump($lesLignes);
 					echo "
 					<table border=1>
-					<tr><td>Id Objet </td> <td>Désignation</td>
-					<td> Etat</td> <td> Prix d'achat </td>
-					<td>Date achat </td> <td>Marque</td>
-					<td> Tranche Age </td> <td> Image </td> </tr>
+					<tr><td>Lieu </td> <td>Libelle</td>
 					";
 					//parcourir les lignes et les afficher dans la table
-					foreach ($mesObjets as $uneLigne)
+					foreach ($lesLignes as $uneLigne)
 					{
-						echo "<tr> <td>".$uneLigne['idobjet']."</td>
-						<td>".$uneLigne['designation']."</td>
-						<td>".$uneLigne['etat']."</td>
-						<td>".$uneLigne['prixachat']."</td>
-						<td>".$uneLigne['dateachat']."</td>
-						<td>".$uneLigne['marque']."</td>
-						<td>".$uneLigne['trancheage']."</td>
-						<td>".$uneLigne['image']."</td></tr>";
+						echo "<tr> <td>".$uneLigne['Lieu']."</td>
+						<td>".$uneLigne['Libelle']."</td></tr>";
 					}
-					echo "</table>";
 					break;
-					case 3: require_once ("ajoutObjet.php");break;
-					break;
+					
+						
 					CASE 4:
 					$lesLignes = afficher_loisir();
 					//var_dump($lesLignes);
@@ -122,57 +106,7 @@
 						<td>".$uneLigne['lieu']."</td></tr>";
 					}
 					break;
-					case 5 : 
-					//appel de la fonction select*from objets
-					$lesLignes = objet_don ();
-					//var_dump($lesLignes);
-					echo "
-					<table border=1>
-					<tr><td>Id Objet </td> <td>Désignation</td>
-					<td> Etat</td> <td> Prix d'achat </td>
-					<td>Date achat </td> <td>Marque</td>
-					<td> Tranche Age </td> <td> Image </td> </tr>
-					";
-					//parcourir les lignes et les afficher dans la table
-					foreach ($lesLignes as $uneLigne)
-					{
-						echo "<tr> <td>".$uneLigne['idobjet']."</td>
-						<td>".$uneLigne['designation']."</td>
-						<td>".$uneLigne['etat']."</td>
-						<td>".$uneLigne['prixachat']."</td>
-						<td>".$uneLigne['dateachat']."</td>
-						<td>".$uneLigne['marque']."</td>
-						<td>".$uneLigne['trancheage']."</td>
-						<td>".$uneLigne['image']."</td></tr>";
-					}
-					break;
-					case 6 : 
-					//appel de la fonction select*from objets
-					$lesLignes = objet_echange ();
-					//var_dump($lesLignes);
-					echo "
-					<table border=1>
-					<tr><td>Id Objet </td> <td>Désignation</td>
-					<td> Etat</td> <td> Prix d'achat </td>
-					<td>Date achat </td> <td>Marque</td>
-					<td> Tranche Age </td> <td> Image </td> </tr>
-					";
-					//parcourir les lignes et les afficher dans la table
-					foreach ($lesLignes as $uneLigne)
-					{
-						echo "<tr> <td>".$uneLigne['idobjet']."</td>
-						<td>".$uneLigne['designation']."</td>
-						<td>".$uneLigne['etat']."</td>
-						<td>".$uneLigne['prixachat']."</td>
-						<td>".$uneLigne['dateachat']."</td>
-						<td>".$uneLigne['marque']."</td>
-						<td>".$uneLigne['trancheage']."</td>
-						<td>".$uneLigne['image']."</td></tr>";
-					}
-					break;
-					case 7 : require_once ("faire_vente.php");break;
-					case 8 : require_once ("faire_don.php");break;
-					case 9 : require_once ("faire_echange.php");break;
+					
 					case 10: session_destroy();
 				}
 		}
