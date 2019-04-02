@@ -75,17 +75,18 @@
 						
 					case 2:
 					
-					$lesLignes = afficher_evenement();
+					$lesLignes = afficher_loisir();
 					//var_dump($lesLignes);
 					echo "
 					<table border=1>
-					<tr><td>Lieu </td> <td>Libelle</td>
+					<tr><td>ID loisir</td><td>Libelle </td> <td>Lieu</td> 
 					";
 					//parcourir les lignes et les afficher dans la table
 					foreach ($lesLignes as $uneLigne)
 					{
-						echo "<tr> <td>".$uneLigne['Lieu']."</td>
-						<td>".$uneLigne['Libelle']."</td></tr>";
+						echo "<tr> <td>".$uneLigne['idL']."</td>
+						<td>".$uneLigne['libelle']."</td>
+						<td>".$uneLigne['lieu']."</td></tr>";
 					}
 					break;
 					
