@@ -106,10 +106,7 @@
 					break;
 					case 3: require_once ("ajoutObjet.php");break;
 					break;
-CASE 4
-
-
-
+					CASE 4:
 					$lesLignes = afficher_loisir();
 					//var_dump($lesLignes);
 					echo "
