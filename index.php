@@ -36,11 +36,11 @@
 		if (isset($_SESSION['nom']))
 		{
 						echo "</center>
-		<br/> <a href='index.php?page=1'> cantine </a>";
+		<br/> <a href='index.php?page=1'> Voir les cantines </a>";
 		echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
 	        echo "<br/> <a href='index.php?page=3'> voir evenement </a>";
                 echo "<br/> <a href='index.php?page=4'> Voir les objets en vente </a>";
-                echo "<br/> <a href='index.php?page=5'> Voir les objets en don </a>";
+                echo "<br/> <a href='index.php?page=5'> Attraper un café en bluetooth</a>";
                 echo "<br/> <a href='index.php?page=6'> Voir les objets en échange </a>";
                 echo "<br/> <a href='index.php?page=7'> Faire une vente d'objet </a>";
                 echo "<br/> <a href='index.php?page=8'> Faire un don d'objet</a>";
@@ -105,6 +105,21 @@
 						echo "<tr> <td>".$uneLigne['idL']."</td>
 						<td>".$uneLigne['libelle']."</td>
 						<td>".$uneLigne['lieu']."</td></tr>";
+					}
+					break;
+						
+					case 3:
+					$lesLignes = afficher_evenement();
+					//var_dump($lesLignes);
+					echo "
+					<table border=1>
+					<tr><td>Lieu </td> <td>Libelle</td>
+					";
+					//parcourir les lignes et les afficher dans la table
+					foreach ($lesLignes as $uneLigne)
+					{
+						echo "<tr> <td>".$uneLigne['lieu']."</td>
+						<td>".$uneLigne['Libelle']."</td></tr>";
 					}
 					break;
 					
