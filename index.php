@@ -36,9 +36,9 @@
 		if (isset($_SESSION['nom']))
 		{
 						echo "</center>
-					<br/> <a href='index.php?page=1'> loisir </a>";
-				echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
-				 echo "<br/> <a href='index.php?page=3'> voir evenement </a>";
+		<br/> <a href='index.php?page=1'> cantine </a>";
+		echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
+	        echo "<br/> <a href='index.php?page=3'> voir evenement </a>";
                 echo "<br/> <a href='index.php?page=4'> Voir les objets en vente </a>";
                 echo "<br/> <a href='index.php?page=5'> Voir les objets en don </a>";
                 echo "<br/> <a href='index.php?page=6'> Voir les objets en échange </a>";
