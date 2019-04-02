@@ -20,7 +20,7 @@
 	<?php
 		if (isset($_POST['SeConnecter']))
 		{
-			$pseudo = $_POST['nom'];
+			$nom = $_POST['nom'];
 			$mdp = $_POST['mdp'];
 			$resultat = verif_connexion ($nom, $mdp);
 			//var_dump($resultat);
