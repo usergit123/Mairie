@@ -82,7 +82,7 @@ function afficher_Evenement()
 	$con =connexion();
 	if($con == null)
 		{ 
-			return null
+			return null;
 		}
 	else
 	{
