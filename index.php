@@ -29,7 +29,7 @@
 				echo"<br/> veuillez vérifier vos identifiants ";
 			}else{
 				echo "<br/> Bienvenue ".$resultat["nom"]."  ".$resultat["prenom"];				
-				$_SESSION['pseudo']=$resultat['nom'];
+				$_SESSION['nom']=$resultat['nom'];
 				$_SESSION['idP']=$resultat['idP'];
 			}
 		}
