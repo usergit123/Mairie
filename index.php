@@ -11,7 +11,7 @@
 <center>
 	<h1> SITE DE LA MAIRIE </h1>
 	<form method ="post" action ="">
-	Pseudo : <input type ="text" name="pseudo"> </br> 
+	Nom : <input type ="text" name="nom"> </br> 
 	MDP : <input type ="password" name="mdp"> </br> 
 	<input type ="reset" name ="Annuler" value ="Annuler">
 	<input type ="submit" name ="SeConnecter" value ="Se Connecter"><br/>
@@ -20,9 +20,9 @@
 	<?php
 		if (isset($_POST['SeConnecter']))
 		{
-			$pseudo = $_POST['pseudo'];
+			$pseudo = $_POST['nom'];
 			$mdp = $_POST['mdp'];
-			$resultat = verif_connexion ($pseudo, $mdp);
+			$resultat = verif_connexion ($nom, $mdp);
 			//var_dump($resultat);
 			if($resultat==null)
 			{
