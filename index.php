@@ -29,11 +29,11 @@
 				echo"<br/> veuillez vérifier vos identifiants ";
 			}else{
 				echo "<br/> Bienvenue ".$resultat["nom"]."  ".$resultat["prenom"];				
-				$_SESSION['pseudo']=$resultat['pseudo'];
-				$_SESSION['idenfant']=$resultat['idenfant'];
+				$_SESSION['pseudo']=$resultat['nom'];
+				$_SESSION['idP']=$resultat['idP'];
 			}
 		}
-		if (isset($_SESSION['idenfant']))
+		if (isset($_SESSION['nom']))
 		{
 						echo "</center>
 					<br/> <a href='index.php?page=1'> loisir </a>";
