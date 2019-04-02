@@ -122,6 +122,22 @@
 						<td>".$uneLigne['Libelle']."</td></tr>";
 					}
 					break;
+						
+					case 6:
+					$lesLignes = afficher_association();
+
+					echo " <table border=1>
+					<tr><td> libelleA </td> <td> adresse </td> <td> tel </td> <td> codeP </td> "
+
+
+					foreach ($lesLignes as $uneLigne)
+					{
+						echo "<tr> <td>".$uneLigne['libelleA']." </td>
+						<td> ".$uneLigne['adresse']." </td>
+						".$uneLigne['tel']." </td>
+						".$uneLigne['codeP']." </td>
+						<td>";
+					}
 					
 					case 10: session_destroy();
 				}
