@@ -16,7 +16,8 @@ lieu varchar(50),
 primary key(idL)
 );
 create table personne
-(pseudo varchar(50) not null unique,
+(idP int(3) not null auto_increment,
+pseudo varchar(50) not null unique,
 mdp varchar(50),
 nom varchar(20),
 prenom varchar(20),
