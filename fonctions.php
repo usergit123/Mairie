@@ -2,7 +2,7 @@
 	
 	function connexion ()
 	{
-			$con = mysqli_connect("localhost","root","","troc"); 
+			$con = mysqli_connect("localhost","root","","mairie"); 
 			if ($con == null)
 			{
 				echo "Erreur de connexion au serveur localhost";
@@ -17,9 +17,9 @@
 	{
 		if ($con != null ) { mysqli_close($con); }
 	}
-	function verif_connexion ($pseudo, $mdp)
+	function verif_connexion ($idP, $mdp)
 	{
-		$requete = "select * from personne where nom ='".$nom."' and mdp ='".$mdp."';"; 
+		$requete = "select * from personne where idP='".$idP."' and mdp ='".$mdp."';"; 
 		$con = connexion (); 
 		if ($con==null) {
 			return null; 
