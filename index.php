@@ -67,9 +67,9 @@
 					//parcourir les lignes et les afficher dans la table
 					foreach ($lesLignes as $uneLigne)
 					{
-						echo "<tr> <td>".$uneLigne['Ville']."</td>
-						<td>".$uneLigne['Codepostal']."</td></tr>"
-						.$uneLigne['Ville']."</td><tr>";
+						echo "<tr> <td>".$uneLigne['ville']."</td>
+						<td>".$uneLigne['codepostal']."</td>
+						<td>".$uneLigne['prix']."</td><tr>";
 					}
 					break;
 						
