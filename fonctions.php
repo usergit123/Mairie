@@ -32,7 +32,7 @@
 	}
 function afficher_loisir()
 {
-	$requete="select l.idL, l.libelle, l.lieuL from loisir l;";
+	$requete="select l.idL, l.libelle, l.lieu from loisir l;";
 		$con = connexion ();
 		if($con == null)
 		{
