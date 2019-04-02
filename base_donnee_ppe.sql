@@ -17,7 +17,6 @@ primary key(idL)
 );
 create table personne
 (idP int(3) not null auto_increment,
-pseudo varchar(50) not null unique,
 mdp varchar(50),
 nom varchar(20),
 prenom varchar(20),
@@ -105,8 +104,8 @@ foreign key(idP2) references evenement(idP)
 insert into loisir values(null, "concert", "Quincy");
 
 INSERT INTO personne (idP,mdp,nom,prenom,adresse,Tel,cp,email,datenaiss,sexe,fonction) 
-VALUES (null,'K', 123,"Henry","Kevin", "28 rue delacarte","0102030405",75000,"kevin@henry.fr","1996/01/04","homme","PDG"),
-	   (null, 'A', 42,"Puechmaille","Audran","perpete les oies","0504030201",7500,"audran@puecmaille.fr","1996/02/02","femme","esclave");
+VALUES (null, 123,"Henry","Kevin", "28 rue delacarte","0102030405",75000,"kevin@henry.fr","1996/01/04","homme","PDG"),
+	   (null, 42,"Puechmaille","Audran","perpete les oies","0504030201",7500,"audran@puecmaille.fr","1996/02/02","femme","esclave");
 
 insert into cantine 
 values (null,"ville",75000,5);
