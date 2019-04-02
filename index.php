@@ -119,7 +119,7 @@
 					{
 						echo "<tr> <td>".$uneLigne['idL']."</td>
 						<td>".$uneLigne['libelle']."</td>
-						<td>".$uneLigne['lieuL']."</td></tr>";
+						<td>".$uneLigne['lieu']."</td></tr>";
 					}
 					break;
 					case 5 : 
