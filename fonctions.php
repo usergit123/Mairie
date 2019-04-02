@@ -53,7 +53,50 @@ function afficher_loisir()
 		}
 }
 
+function afficher_Cantine()
+{
+	$requete="Select ville, codepostal, prix from cantine;";
+		$con = connexion();
+		if($con == null )
+		{
+			return null;
+		}
+		else{
 
+			$resultats=mysqli_query($con, $requete);
+
+			$lesLignes =array();
+
+			while ($ligne = mysqli_fetch_assoc($resultats))
+			{
+				$lesLignes[]=$ligne;
+			}
+
+			return $lesLignes;
+		}
+}
+
+function afficher_Evenement()
+{
+	$requete="Select libelle, lieu from evenement;";
+	$con =connexion();
+	if($con == null)
+		{ 
+			return null
+		}
+	else
+	{
+		$resultats=mysqli_query($con, $requete);
+		$lesLignes = array();
+
+		while ($ligne = mysqli_fetch_assoc($resultats))
+		{
+			$lesLignes[]=$ligne;
+		}
+
+		return $lesLignes;
+	}
+}
 ?>
 
 
