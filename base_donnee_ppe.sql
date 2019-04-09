@@ -17,6 +17,7 @@ primary key(idL)
 );
 create table personne
 (idP int(3) not null auto_increment,
+pseudo varchar(20) unique,
 mdp varchar(50),
 nom varchar(20),
 prenom varchar(20),
