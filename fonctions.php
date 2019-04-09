@@ -13,13 +13,13 @@
 				return $con;
 			}
 	}
-	function deconnexion ($con)
+function deconnexion ($con)
 	{
 		if ($con != null ) { mysqli_close($con); }
 	}
-	function verif_connexion ($idP, $mdp)
+function verif_connexion ($idP, $mdp)
 	{
-		$requete = "select * from personne where $nom='".$nom."' and mdp ='".$mdp."';"; 
+		$requete = "select * from personne where $pseudo='".$pseudo."' and mdp ='".$mdp."';"; 
 		$con = connexion (); 
 		if ($con==null) {
 			return null; 
