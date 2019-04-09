@@ -11,7 +11,7 @@
 <center>
 	<h1> SITE DE LA MAIRIE </h1>
 	<form method ="post" action ="">
-	Pseudo : <input type ="text" name="nom"> </br> 
+	Pseudo : <input type ="text" name="pseudo"> </br> 
 	MDP : <input type ="password" name="mdp"> </br> 
 	<input type ="reset" name ="Annuler" value ="Annuler">
 	<input type ="submit" name ="SeConnecter" value ="Se Connecter"><br/>
@@ -20,9 +20,9 @@
 	<?php
 		if (isset($_POST['SeConnecter']))
 		{
-			$nom = $_POST['nom'];
+			$pseudo = $_POST['pseudo'];
 			$mdp = $_POST['mdp'];
-			$resultat = verif_connexion ($nom, $mdp);
+			$resultat = verif_connexion ($pseudo, $mdp);
 			//var_dump($resultat);
 			if($resultat==null)
 			{
@@ -36,13 +36,13 @@
 
 			}
 		}
-		if (isset($_SESSION['Idp']))
+		if (isset($_SESSION['IdP']))
 		{
-						echo "</center>
-					<br/> <a href='index.php?page=1'> Cantines </a>";
-				echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
-				 echo "<br/> <a href='index.php?page=3'> Voir evenement </a>";
-                echo "<br/> <a href='index.php?page=10'> Se Déconnecter </a>";
+			 echo "</center>
+			 <br/> <a href='index.php?page=1'> Cantines </a>";
+			 echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
+			 echo "<br/> <a href='index.php?page=3'> Voir evenement </a>";
+               		 echo "<br/> <a href='index.php?page=10'> Se Déconnecter </a>";
 				
 				if (isset($_GET['page']))
 				{
