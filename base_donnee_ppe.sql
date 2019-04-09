@@ -99,7 +99,7 @@ dateMariage date not null,
 datedivorce date,
 primary key(idP1,idP2,datemariage),
 foreign key(idP1) references personne(idP),
-foreign key(idP2) references evenement(idP)
+foreign key(idP2) references personne(idP)
 );
 
 insert into loisir values(null, "concert", "Quincy");
