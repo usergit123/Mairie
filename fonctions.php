@@ -19,7 +19,7 @@
 	}
 	function verif_connexion ($idP, $mdp)
 	{
-		$requete = "select * from personne where idP='".$idP."' and mdp ='".$mdp."';"; 
+		$requete = "select * from personne where $nom='".$nom."' and mdp ='".$mdp."';"; 
 		$con = connexion (); 
 		if ($con==null) {
 			return null; 
