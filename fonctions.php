@@ -19,7 +19,7 @@ function deconnexion ($con)
 	}
 function verif_connexion ($idP, $mdp)
 	{
-		$requete = "select * from personne where $pseudo='".$pseudo."' and mdp ='".$mdp."';"; 
+		$requete = "select * from personne where pseudo='".$pseudo."' and mdp ='".$mdp."';"; 
 		$con = connexion (); 
 		if ($con==null) {
 			return null; 
