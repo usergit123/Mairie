@@ -31,7 +31,7 @@
 				echo "<br/> Bienvenue ".$resultat["nom"]." , ".$resultat["prenom"]."";			
 				$_SESSION['nom']=$resultat['nom'];
 				$_SESSION['prenom']=$resultat['prenom'];
-				$_SESSION['Idp']=$resultat['Idp'];
+				$_SESSION['idP']=$resultat['idP'];
 
 
 			}
