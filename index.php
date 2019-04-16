@@ -45,6 +45,7 @@
 			 echo "<br/> <a href='index.php?page=3'> Voir les événements </a>";
 			 echo "<br/> <a href='index.php?page=4'> Voir les associations </a>";
 			 echo "<br/> <a href='index.php?page=5'> Voir les mariages </a>";
+			 echo "<br/> <a href='index.php?page=6'> Voir les actes </a>";
                		 echo "<br/> <a href='index.php?page=10'> Se Déconnecter </a>";
 				
 				if (isset($_GET['page']))
@@ -134,6 +135,24 @@
 						<td> ".$uneLigne['b']." </td>
 						<td>".$uneLigne['c']." </td>
 						<td>".$uneLigne['d']." </td>
+						</tr>";
+					}
+					break;
+					case 6:
+					$lesLignes = afficher_acte($_SESSION['idP']);
+					echo " <table border=1>
+					<tr><td> id acte </td>
+					 <td> id personne </td>
+					 <td> date de mariage </td>
+					 <td> date de naissance </td>
+					 <td> date de décès </td>";
+					foreach ($lesLignes as $uneLigne)
+					{
+						echo "<tr> <td>".$uneLigne['idF']." </td>
+						<td> ".$uneLigne['idP']." </td>
+						<td>".$uneLigne['mariage']." </td>
+						<td>".$uneLigne['naissance']." </td>
+						<td>".$uneLigne['deces']." </td>
 						</tr>";
 					}
 					break;
