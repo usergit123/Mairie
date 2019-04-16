@@ -158,9 +158,6 @@
 					break;
 					case 10: session_destroy();
 				}
-
-					case 10: session_destroy();
-				}
 		}
 	?>
 	
