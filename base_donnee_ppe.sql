@@ -105,8 +105,8 @@ foreign key(idP2) references personne(idP)
 insert into loisir values(null, "concert", "Quincy");
 
 INSERT INTO personne (idP,mdp,nom,prenom,adresse,Tel,cp,email,datenaiss,sexe,fonction) 
-VALUES (null, 123,"Henry","Kevin", "28 rue delacarte","0102030405",75000,"kevin@henry.fr","1996/01/04","homme","PDG"),
-	   (null, 42,"Puechmaille","Audran","perpete les oies","0504030201",7500,"audran@puecmaille.fr","1996/02/02","femme","esclave");
+VALUES (null, kev, 123,"Henry","Kevin", "28 rue delacarte","0102030405",75000,"kevin@henry.fr","1996/01/04","homme","PDG"),
+	   (null, aud, 42,"Puechmaille","Audran","perpete les oies","0504030201",7500,"audran@puecmaille.fr","1996/02/02","femme","esclave");
 
 insert into cantine 
 values (null,"ville",75000,5);
