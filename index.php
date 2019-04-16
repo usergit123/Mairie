@@ -37,7 +37,7 @@
 
 			}
 		}
-		if (isset($_SESSION['IdP']))
+		if (isset($_SESSION['idP']))
 		{
 			 echo "</center>
 			 <br/> <a href='index.php?page=1'> Cantines </a>";
