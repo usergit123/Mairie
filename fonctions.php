@@ -97,6 +97,30 @@ function afficher_Evenement()
 		return $lesLignes;
 	}
 }
+
+function afficher_association ()
+{
+	$requete="Select libelleA, tel, adresse, codeP from association;";
+	$con=connexion();
+
+	if($con==null)
+	{
+		return null;
+	}
+	else
+	{
+		$resultats=mysqli_query($con, $requete);
+		$lesLignes = array();
+
+		while ($ligne = mysqli_fetch_assoc($resultats))
+		{
+			$lesLignes[]=$ligne;
+		}
+
+		return $lesLignes;
+	}
+}
+
 ?>
 
 
