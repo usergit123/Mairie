@@ -71,7 +71,7 @@
 					break;
 					
 
-					case 4:
+					case 2:
 					$lesLignes = afficher_loisir();
 					//var_dump($lesLignes);
 					echo "
@@ -83,11 +83,11 @@
 					foreach ($lesLignes as $uneLigne)
 					{
 						echo "<tr> <td>".$uneLigne['libelle']."</td>
-						<td>".$uneLigne['lieuL']."</td></tr>";
+						<td>".$uneLigne['lieu']."</td></tr>";
 					}
 					break;
 
-					case 5:
+					case 3:
 					$lesLignes = afficher_evenement();
 					//var_dump($lesLignes);
 					echo "
@@ -102,7 +102,7 @@
 					}
 					break;
 
-					case 6:
+					case 4:
 					$lesLignes = afficher_association();
 
 					echo " <table border=1>
