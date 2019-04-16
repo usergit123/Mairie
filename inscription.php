@@ -83,12 +83,9 @@
 
             </tr>
 
-            <tr>
-            
-            <td><label for="sexe"><strong> Sexe :</strong></label></td>
-            <td><input type="text" name="sexe" id="sexe"/></td>
-
-            </tr>
+    <td>  <strong>Sexe : </td>
+    <td>  <input type="radio" name="sexe" value="male" > Homme<br></td>
+    <td>  <input type="radio" name="sexe" value="female"> Femme<br></td>
             
             <tr>
             
