@@ -42,7 +42,8 @@
 			 echo "</center>
 			 <br/> <a href='index.php?page=1'> Cantines </a>";
 			 echo "<br/> <a href='index.php?page=2'> Voir les loisirs </a>";
-			 echo "<br/> <a href='index.php?page=3'> Voir evenement </a>";
+			 echo "<br/> <a href='index.php?page=3'> Voir les événements </a>";
+			 echo "<br/> <a href='index.php?page=4'> Voir les associations </a>";
                		 echo "<br/> <a href='index.php?page=10'> Se Déconnecter </a>";
 				
 				if (isset($_GET['page']))
