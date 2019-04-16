@@ -5,7 +5,8 @@
 <html>
 <head>
 <title> Site de la Mairie </title>
-<meta charset ="utf-8">
+<meta charset ="utf-8">; 
+<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
 <center>
