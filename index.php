@@ -83,7 +83,8 @@
 					//parcourir les lignes et les afficher dans la table
 					foreach ($lesLignes as $uneLigne)
 					{
-						echo "<tr> <td>".$uneLigne['libelle']."</td>
+						echo "<tr> <td>".$uneLigne['idL']."</td>
+						<td>".$uneLigne['libelle']."</td>
 						<td>".$uneLigne['lieu']."</td></tr>";
 					}
 					break;
