@@ -1,6 +1,6 @@
 
 <html>
-	
+  
     <head>
     
         <title>Création d'un formulaire d'inscription en HTML</title>
@@ -105,19 +105,14 @@
 </html>
 
 <?php
-
 session_start();
-
 $BDD = mysqli_connect("localhost","root","","Mairie");
-
 ?>
 
 <?php
-
 // On met les variables utilisé dans le code PHP à FALSE (C'est-à-dire les désactiver pour le moment).
 $error = FALSE;
 $registerOK = FALSE;
-
     // On regarde si l'utilisateur est bien passé par le module d'inscription
     if(isset($_POST["register"])){
         
@@ -160,7 +155,6 @@ $registerOK = FALSE;
                            $sql = "INSERT INTO personne (Idp,pseudo,mdp,nom,prenom,adresse,tel,cp,email,datenaiss,sexe,fonction) VALUES (null,'".$_POST["login"]."','".$_POST["pass"]."','".$_POST["nom"]."','".$_POST["prenom"]."','".$_POST["adresse"]."','".$_POST["tel"]."','".$_POST["cp"]."','".$_POST["email"]."','".$_POST["datenaiss"]."',
                            '".$_POST["sexe"]."','".$_POST["fonction"]."')";
                            $sql = mysqli_query($BDD,$sql);
-
                            // Si la requête s'est bien effectué :
                            if($sql){
                            
@@ -269,13 +263,10 @@ $registerOK = FALSE;
       }
         
     }
-
 ?>
 
 <?php
-
    mysqli_close($BDD);
-
 ?>
 
 <?php // On affiche les erreurs :
