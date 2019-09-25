@@ -1,0 +1,36 @@
+:root{
+/--main-red-color: #a83535;
+--default-red-color:red;
+--default-magin: 250px;/hirritage *
+border-image-source: 100%;*/
+}
+
+
+ h1 {
+    background-color: #eee;
+
+    text-align: center;
+}
+
+
+ul >li{
+     background-color: #DAE5BC; 
+     width: 100%;
+
+
+
+}
+
+body> 
+form >table>tr>td>label{
+
+
+
+    background-color: #DAE5BC;
+    padding: 15px 30px ; 
+    font-size: 13px; 
+    color: #222538; 
+    width: 270px;
+
+
+}
