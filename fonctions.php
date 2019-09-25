@@ -121,7 +121,28 @@ function afficher_association ()
 		return $lesLignes;
 	}
 }
-function afficher_mariage ()
+function afficher_mariage($idPer)
+{
+	$requete="select p1.nom a,p1.prenom b,p2.nom c,p2.prenom d
+    from personne p1, personne p2, mariage m
+    where p1.idP=m.idP1 and p2.idP=m.idP2    and   idPer=".$_SESSION['idP']." and (idPer=p1.idP or idPer=p2.idP);";
+	$con=connexion();
+	if($con==null)
+	{
+		return null;
+	}
+	else
+	{
+		$resultats=mysqli_query($con, $requete);
+		$lesLignes = array();
+		while ($ligne = mysqli_fetch_assoc($resultats))
+		{
+			$lesLignes[]=$ligne;
+		}
+		return $lesLignes;
+	}
+}
+function afficher_mariage_admin ()
 {
 	$requete="select p1.nom a,p1.prenom b,p2.nom c,p2.prenom d
     from personne p1, personne p2, mariage m
@@ -161,9 +182,47 @@ function afficher_acte ($idP)
 		return $lesLignes;
 	}
 }
+function afficher_acte_admin ()
+{
+	$requete="select*from actes;";
+	$con=connexion();
+	if($con==null)
+	{
+		return null;
+	}
+	else
+	{
+		$resultats=mysqli_query($con, $requete);
+		$lesLignes = array();
+		while ($ligne = mysqli_fetch_assoc($resultats))
+		{
+			$lesLignes[]=$ligne;
+		}
+		return $lesLignes;
+	}
+}
 function afficher_enfants ($idP)
 {
 	$requete="select*from enfants where idP=".$_SESSION['idP'].";";
+	$con=connexion();
+	if($con==null)
+	{
+		return null;
+	}
+	else
+	{
+		$resultats=mysqli_query($con, $requete);
+		$lesLignes = array();
+		while ($ligne = mysqli_fetch_assoc($resultats))
+		{
+			$lesLignes[]=$ligne;
+		}
+		return $lesLignes;
+	}
+}
+function afficher_enfants_admin ()
+{
+	$requete="select*from enfants;";
 	$con=connexion();
 	if($con==null)
 	{
