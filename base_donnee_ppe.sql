@@ -38,6 +38,7 @@ create table evenement
 (idEV int(3) not null auto_increment,
 lieu varchar(50),
 libelle varchar(50),
+dateEV date,
 primary key(idEV)
 );
 create table association
@@ -46,6 +47,7 @@ libelleA varchar(50),
 adresse varchar(50),
 tel char(10),
 codeP int,
+dateA date,
 primary key(idA)
 );
 create table enfants
@@ -125,12 +127,23 @@ values(null,"libelle","lieu"),
 
 insert into mariage(idP1,idP2,dateMariage,datedivorce) values (1,2,'2018/09/01','2019/01/01');
 
-insert into evenement(idEV, lieu, libelle) values (null, 'defense', 'fete');
+insert into evenement(idEV, lieu, libelle, dateEV) values (null, 'defense', 'fete', '2007/02/04');
 
-insert into association (idA,libelleA,adresse,tel,codeP) values (null, 'association1', 'adresse association', 0102030405, 75000);
+insert into association (idA,libelleA,adresse,tel,codeP, dateA) values (null, 'association1', 'adresse association', 0102030405, 75000, '2008/05/06');
 
 insert into actes (idF, idP, mariage, naissance, deces) values (null, 1, '2018/09/01','1997/01/04',null);
 
 insert into enfants (idE, idP, idC, nomE, prenomE, sexe) values (null, 1, 1, 'ben', 'ocka', 'garçon');
 
 insert into admin values (1,'kevin',123);
+
+insert into evenement(idEV, lieu, libelle, DateEV) 
+values (null, 'defense', 'fete', "2019-02-10"),
+	   (null, 'E-sport', 'competition', "2019-02-10"),
+	   (null, 'Paris 17', 'Concours de programmation', "2019-01-10"),
+	   (null, 'Evry', 'Sprint 200m', "2019-01-10"),
+	   (null, 'Antibes', 'Beach party', "2019-01-10"),
+	   (null, 'Monaco', 'Piscine geante', "2019-03-10"),
+	   (null, 'Normandie', 'Peche au gros', "2019-03-10"),
+	   (null, 'Saint-Germain-en-Laye', 'Foot en salle', "2019-03-10"),
+	   (null, 'Bercy', 'Concert', "2019-02-10");
