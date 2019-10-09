@@ -335,7 +335,7 @@ header('Location: connexion_admin.php');
                     }
                     break;
 					case 6:
-					$lesLignes = afficher_acte($_SESSION['idP']);
+					$lesLignes = afficher_acte_admin();
 					echo " <table border=1>
 					<tr><td> id acte </td>
 					 <td> id personne </td>
@@ -353,7 +353,7 @@ header('Location: connexion_admin.php');
 					}
 					break;
 					case 7:
-					$lesLignes = afficher_enfants($_SESSION['idP']);
+					$lesLignes = afficher_enfants_admin();
 					echo " <table border=1>
 					<tr><td> id enfant </td>
 					 <td> id parent </td>
