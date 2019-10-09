@@ -12,7 +12,14 @@
 if (isset($_POST['supprimer'])) 
 { 
 header('Location: connexion_admin.php'); 
-} ?>
+} 
+
+if (isset($_POST['ajouter'])) 
+{ 
+header('Location: connexion_admin.php'); 
+} 
+
+?>
 </head>
 <body>
 <img src="img/mairie.jpg"width="100%"height="100%">
@@ -38,7 +45,7 @@ header('Location: connexion_admin.php');
 				echo "<br/> Bienvenue ".$resultat["pseudo"];			
 				$_SESSION['numA']=$resultat['numA'];
 				$int='prenom';
-				echo strlen((string)$int); 
+				//echo strlen((string)$int); 
 				
 			}
 		}
